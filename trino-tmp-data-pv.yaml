@@ -1,0 +1,47 @@
+  apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    name: task-pv-volume1 
+    labels:
+      type: local
+  spec:
+    storageClassName: pure-block 
+    capacity:
+      storage: 10Gi
+    accessModes:
+      - ReadWriteOnce 
+    persistentVolumeReclaimPolicy: Retain
+    hostPath:
+      path: "/var/trino-tmp/data1" 
+---
+  apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    name: task-pv-volume2
+    labels:
+      type: local
+  spec:
+    storageClassName: pure-block 
+    capacity:
+      storage: 10Gi
+    accessModes:
+      - ReadWriteOnce 
+    persistentVolumeReclaimPolicy: Retain
+    hostPath:
+      path: "/var/trino-tmp/data2" 
+---
+  apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    name: task-pv-volume3
+    labels:
+      type: local
+  spec:
+    storageClassName: pure-block 
+    capacity:
+      storage: 10Gi
+    accessModes:
+      - ReadWriteOnce 
+    persistentVolumeReclaimPolicy: Retain
+    hostPath:
+      path: "/var/trino-tmp/data3" 
